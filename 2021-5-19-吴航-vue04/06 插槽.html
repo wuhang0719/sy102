@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <h1>{{msg}}</h1>
+        <hr>
+        <child>
+            <!-- 1、设置插槽 -->
+            <!-- <template slot="a"> -->
+            <!-- <template v-slot:a> -->
+            <template #a>
+                <nav>
+                    <a href="">导航999</a>
+                    <a href="">导航22</a>
+                    <a href="">导航33</a>
+                    <a href="">导航44</a>
+                </nav>
+            </template>
+            <!-- <h1 slot="a">header</h1> -->
+            <!-- 没有slot的属性值 -->
+            <h2>main</h2>
+            <h3 slot="b">footer</h3>
+        </child>
+    </div>
+    <template id="child">
+        <div>
+            <h1>child part1</h1>
+            <!-- 2、使用插槽 -->
+            <slot name="a"></slot>
+            <h1>child part2</h1>
+            <slot name="b"></slot>
+            <h1>child part3</h1>
+            <!-- 引入默认的插槽 -->
+            <slot ></slot>
+        </div>
+    </template>
+    <script src="./dist/6.js"></script>
+</body>
+</html>
