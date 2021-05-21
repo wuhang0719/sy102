@@ -1,0 +1,22 @@
+.a,
+.b{
+    height: 1500px;
+}
+.a{
+    background-image: linear-gradient(rgb(51, 202, 177),cyan);
+}
+.b{
+    background-image: linear-gradient(rgb(250, 99, 144),orange);
+}
+.c{
+    background-image: linear-gradient(rgb(106, 127, 245),pink);
+}
+.bm-enter,
+.bm-leave-to{
+    opacity: 0;
+}
+
+.bm-enter-active,
+.bm-leave-active{
+    transition: all 2s;
+}
